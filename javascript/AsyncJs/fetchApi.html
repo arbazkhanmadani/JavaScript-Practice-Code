@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+   
+</head>
+<body>
+    
+
+    <button id="btn">get file</button>
+    <div id="d">
+
+    </div>
+
+   
+
+    <script>
+
+
+            let btn = document.getElementById('btn')
+            
+            btn.addEventListener('click', ()=>{
+
+                setTimeout(()=>{
+
+                     let resp = fetch('data.text')
+                     resp.then((data)=> data.text())
+                     .then((d)=>{console.log(d)
+                     document.getElementById('d').innerHTML = `<h2>${d}</h2>`
+                     }
+                     )
+                     .catch((err)=>console.log(err))
+
+                },2000)
+
+            })
+
+
+
+
+
+           // let resp = fetch('data.text')
+           // resp.then((data)=>{console.log(data.text())})
+            // .catch((err)=>console.log(err))
+
+            /*let btn = document.getElementById('btn')
+             btn.addEventListener('click', 
+            
+                async function getData(){
+
+                    let resp1 = await fetch('data.text')
+                    let data = await resp1.text()
+
+                document.getElementById('d').innerHTML = `<h2>${data}</h2>`
+            
+                }
+            )*/
+
+       
+           
+
+            
+
+            
+
+    </script>
+</body>
+</html>

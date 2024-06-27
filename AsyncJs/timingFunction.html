@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+   
+</head>
+<body>
+
+        <button id="strt" onclick="startId = setTimeout(start,2000)">Start</button>
+        <button  onclick="clearTimeout(startId)">Stop</button>
+
+        <button id="strt" onclick="starIntId=setInterval(startInterval,1000)">StartInterval</button>
+        <button onclick="clearTimeout(starIntId)">StopInterval</button>
+       
+       <div id="d"></div>
+
+
+       
+   <script>
+
+       function start(){
+         console.log("Hyyyyyyyyyyyy")
+        }
+
+        function startInterval(){
+            let div = document.getElementById('d')
+            div.innerHTML+= `Hyyyyyy,Geetanshi<br/>` 
+        }
+        
+
+         let runAfter2000ms = () =>{
+
+            setInterval(()=>{
+                console.log("Hyyyyyyyyyy")
+            }, 2000)
+        }
+
+        runAfter2000ms()
+
+    </script>
+</body>
+</html>

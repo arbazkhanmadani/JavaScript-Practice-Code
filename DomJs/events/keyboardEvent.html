@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    
+    <style>
+        textarea {
+                resize: none;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <textarea rows="15" cols="70" id="txtarea" onkeydown="getKey()" id="txtarea">enter the input...........</textarea>
+
+    <div id="d1"></div>
+    <script>
+
+        let div = document.getElementById('d1')
+        let txtStr = ''
+
+        function getKey(){
+
+            let txt = document.getElementById('txtarea').value
+            txtStr+=txt;
+            div.innerHTML = `<h3>${txt}</h3>`
+        }
+    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+ 
+</head>
+<body>
+    
+    <input type="text" placeholder="enter your name" id="txt" onfocus="focusing()">
+
+    <script>
+
+        let txt = document.getElementById('txt')
+        function focusing(){
+
+            //let txt = document.getElementById('txt').value   
+            txt.style.background = "red"
+        }
+
+    
+        txt.addEventListener('blur',  function bluring(){
+
+            txt.style.background = 'green';
+        })
+
+    
+        txt.onchange = () =>{
+
+           // txt.style.fontFamily =" 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+            txt.style.color = 'white';
+        }
+
+        
+
+    </script>
+</body>
+</html>

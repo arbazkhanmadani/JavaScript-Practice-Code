@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+    
+</head>
+<body>
+    
+    <input id="ipt" />
+
+
+    <script>
+
+         let ipt = document.getElementById('ipt')
+         console.log(ipt)
+
+         ipt.setAttribute('type', 'text')
+         ipt.setAttribute('placeholder', 'enter your name')
+         let attbr = ipt.getAttribute('required')
+         ipt.removeAttribute('placeholder')
+         let has = ipt.hasAttribute('type')
+         console.log(attbr)
+         console.log(has)
+    </script>
+</body>
+</html>

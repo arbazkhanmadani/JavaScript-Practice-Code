@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+    
+</head>
+<body>
+    
+    <div id="d1" class="divs">
+
+        <input type="text" placeholder="enter your name">
+        <input type="text" placeholder="enter your name">
+        <input type="text" placeholder="enter your name">
+        <input type="text" placeholder="enter your name">
+    </div>
+    <div id="d2" class="divs">
+
+        <input type="password" placeholder="enter your password">
+    </div>
+
+    <h1 id="head1">Hyyyyyyyy</h1>
+    <h1>Byyyyyyyy</h1>
+    <h1>Heloooooo</h1>
+    <h1>Are bolo</h1>
+
+
+     
+    <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <script>
+
+        console.log("------------------------By id------------------------------------------")
+        let div = document.getElementById('d1')
+        console.log(div)
+
+
+        console.log("------------------------By class------------------------------------------")
+         let divsByClasas = document.getElementsByClassName('divs')[1]
+         console.log(divsByClasas)
+
+
+         console.log("---------------------------Buy class all---------------------------------------")
+         let divsByClasasAll = document.getElementsByClassName('divs')
+
+        for(elm in divsByClasasAll){
+                console.log(divsByClasasAll[elm])
+        }
+
+
+        console.log("---------------------------By Tag---------------------------------------")
+        const head =  document.getElementsByTagName('h1')
+        for(elm in head){
+                console.log(head[elm])
+        }
+
+
+        console.log("---------------------------By Attribute(QuerySelector)---------------------------------------")
+        const query =  document.querySelector("input[type='text']")
+        console.log(query)
+
+
+        console.log("---------------------------By Attribute(QuerySelectorAll)---------------------------------------")
+        const query1 =  document.querySelectorAll("input[type='text']")
+        for(elm in query1){
+                console.log(query1[elm])
+        }
+
+        console.log("---------------------------By Attribute---------------------------------------")
+        let elements = document.querySelectorAll('div p');
+        console.log(elements)
+      
+
+    </script>
+</body>
+</html>

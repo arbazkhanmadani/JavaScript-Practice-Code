@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+   <style>
+
+    #div1{
+        background-color: red;
+        width: 500px;
+        height: 100px;
+    }
+   </style>
+</head>
+<body>
+    
+    <!--beforeBegin-->
+    <div id="div1">
+    <!--afterbegin-->
+    This my div
+    <!--beforeEnd-->
+    </div>
+    <!--AfterEnd-->
+
+
+    <script>
+
+        let div = document.getElementById('div1')
+
+        div.insertAdjacentHTML('afterbegin', "<h1 id='h' >Hyyyyyyyyyyyyyyyyyyyy</h1>")
+
+        div.insertAdjacentText('beforebegin',"Helooo String")
+    </script>
+</body>
+</html>

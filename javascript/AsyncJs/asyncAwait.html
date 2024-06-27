@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+  
+</head>
+<body>
+    
+
+
+
+    <script>
+
+
+
+         function getCheese(){
+
+            return new Promise((res, rej) =>{
+
+                setTimeout(()=>{
+                        if(res) res("Cheese is getting....")
+                        else rej("Cheese is outta stock...")
+                }, 2000)
+            })          
+        }
+
+
+        function makeDough(){
+
+            return new Promise((res, rej) =>{
+
+                setTimeout(()=>{
+                        if(res) res("Dough is making....")
+                       else 
+                       rej("flour is outta stock...")
+                }, 2000)
+            })   
+        }
+
+
+        function getPizza(){
+
+            
+            return new Promise((res, rej) =>{
+
+                setTimeout(()=>{
+                        if(res) res("Pizza is prapered....")
+                        else rej("Bhai tera pizza jal gya, abb tu kaa khayega...")
+                }, 2000)
+            }) 
+        }
+
+
+       
+        (async function callPormise(){
+
+               let cheese = await getCheese()
+               console.log(cheese)
+
+               let dough = await makeDough()
+               console.log(dough)
+
+               let pizza = await getPizza()
+               console.log(pizza)
+
+        })();
+
+       
+     
+
+
+               
+    </script>
+</body>
+</html>

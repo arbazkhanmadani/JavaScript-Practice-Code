@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+  
+</head>
+<body>
+    
+
+
+
+    <script>
+
+
+
+         function getCheese(){
+
+            return new Promise((res, rej) =>{
+
+                setTimeout(()=>{
+                        if(res) res("Cheese is getting....")
+                        else rej("Cheese is outta stock...")
+                }, 2000)
+            })          
+        }
+
+
+        function makeDough(){
+
+            return new Promise((res, rej) =>{
+
+                setTimeout(()=>{
+                        if(res) res("Dough is making....")
+                       else 
+                       rej("flour is outta stock...")
+                }, 2000)
+            })   
+        }
+
+
+        function getPizza(){
+
+            
+            return new Promise((res, rej) =>{
+
+                setTimeout(()=>{
+                        if(res) res("Pizza is prapered....")
+                        else rej("Bhai tera pizza jal gya, abb tu kaa khayega...")
+                }, 2000)
+            }) 
+        }
+
+
+        //Promise Chaining..............
+        getCheese()
+        .then((cheese)=>{
+            console.log(cheese)
+            return makeDough()
+        })
+        .then((dough)=>{
+            console.log(dough)
+            return getPizza()
+        }).then((pizza)=>console.log(pizza))
+        .catch((err)=>console.log(err))
+              
+
+       // Promise.all([getCheese(),makeDough(), getPizza])
+
+       /*let dough = getCheese().then((cheese)=>{
+            console.log(cheese)
+            return makeDough()
+        }).catch((err)=>console.log(err))
+                    
+       let pizza =  dough.then((dough)=>{
+            console.log(dough)
+            return getPizza()
+        }).catch((err)=>console.log(err))
+
+        pizza.then((dough)=>console.log(dough))
+            .catch((err)=>console.log(err))
+              
+        */
+        
+        
+              
+          /* let prom =  new Promise((resolve, reject)=>{
+
+                let isGreater = 2;
+                if(isGreater>=6)
+                    resolve("promise is resovled : promise 1")
+                else 
+                    reject("promise is rejected : promise 1")
+
+            })    
+
+
+            let prom1 =  new Promise((resolve, reject)=>{
+            
+            let isTrue = true;
+            if(isTrue)
+                resolve("promise is resovled : promise 2")
+            else 
+                reject("promise is rejected : promise 2")
+
+        }) 
+            
+            prom.then((data)=>{
+                console.log(data)
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+           
+            prom1.then((data)=>{
+                console.log(data)
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+            .finally(()=>{
+                console.log("Finally called..................")
+            })
+
+
+
+            Promise.all([prom, prom1]).then((data)=>{
+                console.log(data)
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+            /*prom.then((data)=>{
+                console.log(data)
+            })
+
+            prom.catch((err)=>{
+                console.log(err)
+            })
+
+            prom.finally(()=>{
+                console.log("Finally called..................")
+            })*/
+
+
+
+               
+    </script>
+</body>
+</html>

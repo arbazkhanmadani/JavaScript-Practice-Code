@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+   
+</head>
+<body>
+
+    <div id="d1"></div>
+    
+
+    <script>
+
+            //1. Drirectly added to the body........................................
+           let heading =  document.createElement('h1')//nailpolish container created
+           heading.textContent = "Hy im a heading...................."//nailpolish created and put into container
+            //heading.id = "h1"
+           document.body.appendChild(heading)//Serve to the cusatomer...................
+           console.log(heading)
+
+           
+            //2.added into an element........................................
+            let para =  document.createElement('p')//nailpolish container created
+            para.textContent = "Hy im a paragraph...................."//nailpolish created and put into container
+            let div = document.getElementById('d1')
+            div.appendChild(para)//Serve to the cusatomer...................
+
+            console.log(div)
+
+
+             //2.added into an element........................................
+            let para1 =  document.createElement('p')//nailpolish container created
+           let txt =  document.createTextNode("Hy im a paragraph 2....................")//nailpolish created and put into container
+            para1.append(txt)
+           
+            let div1 = document.getElementById('d1')
+            div.appendChild(para1)//Serve to the cusatomer...................
+
+            console.log(div1)
+
+           
+
+    </script>
+</body>
+</html>

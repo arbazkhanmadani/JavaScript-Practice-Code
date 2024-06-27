@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+ 
+</head>
+<body>
+    
+
+    <ul id="list">
+        <li>Home</li>
+        <li> About Us</li>
+        <li>Contact Us</li>
+        <li>Services</li>
+    </ul>
+    
+
+    <script>
+
+               
+
+              /*  //New element to inserted before...........
+                let li = document.createElement('li')
+                li.textContent = "Testimonials"
+
+                //Position..........................
+                let pos = l.firstElementChild.nextElementSibling
+
+                //before Aboutus...................
+                l.insertBefore(li,pos)
+            */
+
+
+             let l = document.getElementById('list')
+              //New element to inserted after...........
+                let li1 = document.createElement('li')
+                li1.textContent = "terms and conditions"
+
+                //Position..........................
+                let pos1 = l.firstElementChild.nextElementSibling.nextElementSibling
+
+                //before Aboutus...................
+                l.insertBefore(li1,pos1)
+               
+
+                //It is a very new function so its not supported by many browser.......
+               // l.insertAfter(li,pos)
+
+
+
+             
+
+
+    </script>
+</body>
+</html>

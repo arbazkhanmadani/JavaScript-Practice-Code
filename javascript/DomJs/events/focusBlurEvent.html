@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+    
+</head>
+<body>
+    
+
+    <form onsubmit="submitForm()" on>
+
+        <input type="text" placeholder="enter your name........" id="txt" value="Hyyyyyy">
+        <input type="submit" value="submit your form"/>
+        <input type="reset" value="clear the input">
+    </form>
+
+
+    <script>
+
+
+        /*let form = document.forms[0];
+        let ipt = form.firstElementChild.value
+         console.log(ipt)
+        */
+      
+       
+        function submitForm(){
+            let txt = document.getElementById('txt').value
+            alert(`Thankyou for welcoming mr/mrs ${txt}`)
+        }
+
+        let form = document.forms[0];
+
+        form.addEventListener('reset', ()=>{
+
+            alert("you reset the form plss put new input again...")
+        })
+
+
+        window.addEventListener('load', ()=>{
+
+            console.log("Running...............")
+        })
+
+        
+    </script>
+
+</body>
+</html>

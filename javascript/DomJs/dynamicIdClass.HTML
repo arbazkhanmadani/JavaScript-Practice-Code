@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+</head>
+<body>
+    <div>
+         This is a Div................
+    </div>
+    <script>
+           let elm =  document.getElementsByTagName('div')[0]
+           console.log(elm)
+
+           elm.id = "div1"
+          
+           elm.className = "divClass1 divClass2"
+
+           elm.classList.add('classByClassList1')
+           elm.classList.remove('divClass1')
+           elm.classList.replace('divClass2', 'divClass2New')
+           elm.classList.toggle('divClassToggle')
+           console.log(elm)
+    </script>
+</body>
+</html>

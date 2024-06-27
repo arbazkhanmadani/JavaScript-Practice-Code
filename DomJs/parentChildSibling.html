@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+ 
+   
+</head>
+<body>
+
+
+    <ul id="ulist">
+
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Fourth</li>
+        <li>Fifth</li>
+    </ul>
+
+
+    <div>
+        <p id="p">Hyyyyyyyyyyyy</p>
+    </div>
+    
+    <script >
+
+        //Child with the help of parent.................
+         let list = document.getElementById('ulist')
+        let fc = list.firstElementChild
+        let lc = list.lastElementChild
+
+        console.log(fc)
+        console.log(lc)
+
+        let sec = list.firstElementChild.nextElementSibling.nextElementSibling
+        console.log(sec)
+
+
+        let last = list.lastElementChild.previousElementSibling
+        console.log(last)
+        console.log("--------------------------------")
+        console.log(list)
+
+
+
+        console.log("--------------------------------")
+        //Parent with the help of child................
+        let para = document.getElementById('p')
+        //console.log(para)
+
+        let div =  para.parentNode
+        console.log(div)
+
+       let d =  document.getElementById('p').parentNode
+       console.log(d)
+    </script>
+</body>
+</html>

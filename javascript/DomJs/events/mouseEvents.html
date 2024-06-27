@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+
+    <textarea rows="15" cols="70" id="txtarea"  id="txtarea">enter the input...........</textarea>
+    <input type="button" value="submit your answer"  onclick="getKey()"/>
+    <br/>
+
+    <input type="text" placeholder="enter your name.........." id="ipt">
+    <input type="button" value="submit" onmouseleave="getInputByMouse()"/>
+   
+    <div id="d1"></div>
+
+</head>
+<body>
+    
+    <script>
+    
+    let div = document.getElementById('d1')
+    function getInputByMouse(){
+
+        let ipt = document.getElementById('ipt').value
+        div.innerHTML =`<h3>${ipt}</h3>`
+    
+
+    }
+    console.log(ipt)
+
+
+    
+    let div1 = document.getElementById('d1')
+    let txtStr = ''
+
+     function getKey(){
+
+        let txt = document.getElementById('txtarea').value
+        div1.innerHTML = `<h3>${txt}</h3>`
+    }
+
+
+    </script>
+</body>
+</html>

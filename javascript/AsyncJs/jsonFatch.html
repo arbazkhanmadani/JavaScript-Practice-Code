@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+  
+
+    
+  
+</head>
+<body>
+    
+    <script>
+
+            let url = 'https://jsonplaceholder.typicode.com/todos'
+
+            let resp = fetch(url)
+            
+            resp.then(response => response.json())
+            .then(json =>{
+                 
+                console.log(json)
+                
+                for(j of json){
+
+                      document.body.innerHTML = 
+                
+                    `<div>
+                            <h1> id : ${j.userId}</h1>
+                            <h1> title : ${j.title}</h1>
+
+                    </div>`
+                }
+                
+            
+            })
+            .catch((err)=>console.log(err))
+
+    </script>
+</body>
+</html>
